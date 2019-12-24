@@ -44,7 +44,7 @@ The second dataset of this project is [Polish companies bankruptcy data](http://
 - Associated tasks: Classification
 - Labels: 0 for " Not bankrupted", 1 for "Bankrupted"
 
-**Note**: The original dataset consists of five smaller datasets. Each of those datasets contains data about bankruptcy prediction after a specific period of time. For example, the first dataset contains data about companies that went (or didn't go) bankrupt one year after the data collection. The second dataset about companies that went bankrupt two years after the data collection, and so on.
+**Note**: The original dataset consists of five smaller datasets. Each of those datasets contains data about bankruptcy prediction after a specific period of time. For example, the first dataset contains data about companies that went (or didn't go) bankrupt one year after the data collection. The second dataset about companies that went bankrupt two years after the data collection, and so on. For the purposes of this exercise, we concatenated these five datasets into a single dataset and we didn't use the information about the time period passed from data collection to bankruptcy. 
 
 ### Pre-processing methods used:
 - Variance threshold for feature selection
