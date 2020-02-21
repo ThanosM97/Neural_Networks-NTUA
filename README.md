@@ -1,4 +1,4 @@
-# Neural_Networks-NTUA
+# Neural Networks - NTUA ECE
 This repository hosts the programming exercises for the course Neural Networks of NTUA.
 
 ## Contributors:
