@@ -40,6 +40,48 @@ We first examined the effect of the number of trainable layers regarding th accu
 
 ## Results
 
+### From-scratch models (32 input size)
+| Network           | Trainable parameters | Non-Trainable parameters | Steps/ epoch | Validation Steps | Epochs | Memory   | Accuracy |
+|-------------------|----------------------|--------------------------|--------------|------------------|--------|----------|----------|
+| Simple CNN        | 128,420              | 0                        | 30           | 5                | 50     | 1.58 MB  | 0,56     |
+| First_32          | 116,196              | 0                        | 50           | 10               | 150    | 1.45 MB  | 0,57     |
+| First_32_opt      | 116,196              | 0                        | 60           | 10               | 136    | 1.45 MB  | 0,57     |
+| second_32         | 247,556              | 64                       | 40           | 5                | 100    | 3.03 MB  | 0.68     |
+| second_32_b32     | 247,556              | 64                       | 50           | 5                | 100    | 3.03 MB  | 0.65     |
+| second_32_b64     | 247,556              | 64                       | 50           | 5                | 100    | 3.03 MB  | 0.68     |
+| second_32_opt     | 247,556              | 64                       | 50           | 5                | 99     | 3.03 MB  | 0,42     |
+| second_32_b32_opt | 247,556              | 64                       | 50           | 5                | 68     | 3.03 MB  | 0.5      |
+| second_32_b64_opt | 247,556              | 64                       | 50           | 5                | 61     | 3.03 MB  | 0.63     |
+| third_32          | 2,557,781            | 448                      | 40           | 10               | 90     | 30.77 MB | 0,65     |
+| third_32_opt      | 2,557,781            | 448                      | 50           | 10               | 120    | 30.77 MB | 0,59     |
+| fourth_32         | 1,753,252            | 0                        | 40           | 10               | 70     | 21.1 MB  | 0,63     |
+| fourth_32_opt     | 1,753,252            | 0                        | 50           | 10               | 100    | 21.1 MB  | 0,63     |
+
+### From-scratch models (78 input size)
+| Network           | Trainable parameters | Non-Trainable parameters | Steps/ epoch | Validation Steps | Epochs | Memory   | Accuracy |
+|-------------------|----------------------|--------------------------|--------------|------------------|--------|----------|----------|
+| first_78         | 902,628   | 0   | 40 | 10 | 100 | 10.89 MB | 0,57 |
+| first_78_opt     | 902,628   | 0   | 50 | 10 | 52  | 10.89 MB | 0,56 |
+| second_78        | 2,213,636 | 64  | 40 | 10 | 70  | 26.63 MB | 0,66 |
+| second_78_opt    | 2,213,636 | 64  | 50 | 10 | 34  | 26.63 MB | 0,61 |
+| fifth_78         | 142,866   | 570 | 40 | 10 | 80  | 1.79 MB  | 0,64 |
+| fifth_78_b32     | 142,866   | 570 | 40 | 10 | 80  | 1.79 MB  | 0.68 |
+| fifth_78_b64     | 142,866   | 570 | 40 | 10 | 80  | 1.79 MB  | 0.64 |
+| fifth_78_opt     | 142,866   | 570 | 50 | 10 | 85  | 1.79 MB  | 0,44 |
+| fifth_78_b32_opt | 142,866   | 570 | 50 | 10 | 120 | 1.79 MB  | 0.33 |
+| fifth_78_b64_opt | 142,866   | 570 | 50 | 10 | 178 | 1.79 MB  | 0.41 |
+| sixth_78         | 960,036   | 0   | 40 | 10 | 90  | 11.6 MB  | 0,53 |
+| sixth_78_opt     | 960,036   | 0   | 50 | 10 | 54  | 11.6 MB  | 0.53 |
+
+### Different Optimizers for the best model
+
+| Network                       | Trainable parameters | Non-Trainable parameters | Steps/ epoch | Validation Steps | Epochs | Memory  | Accuracy |
+|-------------------------------|----------------------|--------------------------|--------------|------------------|--------|---------|----------|
+| second_32_b64 (Adam)          | 247,556              | 64                       | 50           | 5                | 100    | 3.03 MB | 0.68     |
+| second_model_32_b64_opNadam   | 247,556              | 64                       | 50           | 5                | 100    | 3.03 MB | 0.58     |
+| second_model_32_b64_opRMSprop | 247,556              | 64                       | 50           | 5                | 100    | 3.03 MB | 0.51     |
+| second_model_32_b64_opSGD     | 247,556              | 64                       | 50           | 5                | 200    | 3.03 MB | 0.18     |
+
 ### Transfer Learning
 | Network     | Trainable Layers | Trainable parameters | Epochs | Memory | Accuracy |
 |-------------|------------------|----------------------|--------|--------|----------|
