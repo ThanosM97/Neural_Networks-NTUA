@@ -1,4 +1,4 @@
-# Deep Learning
+# Deep Learning: Image Classification
 
 ## Dataset 
 ![CIFAR-100](https://datarepository.wolframcloud.com/resources/images/69f/69f1e629-81e6-4eaa-998f-f6734fcd2cb3-io-4-o.en.gif)
