@@ -37,10 +37,20 @@ Original paper: [EfficientNet: Rethinking Model Scaling for Convolutional Neural
 
 We first examined the effect of the number of trainable layers regarding th accuracy of the model. Then we chose the model that performed best and examined its performance with the use of different optimizers and steps per training epoch. On the results below, we used early stopping with a maximum number of epochs of 200.
 
+## From Scratch
+
+On this part of the lab we tried to build some architectures from scratch . For this purpose we builded 2 models for image size 32x32 and 78x78  (First,Second) ,
+2 models only for image size 32x32(Third,Fourth) and other 2 models ony for image size 78x78 (Fifth,Sixth) .
+
+These models have 2 versions,the simple and the optimized . In optimized version we applied some extra techniques such as Data augmentation , Early Stopping . 
+The aim was to distinguish the two best models in our task. The best models tested with different batch size parameters (32,64,default=128) and then 
+the best one (second_32_b64) tested with different optimizers ( Adam, Nadam, RMSprop, SGD ) .
+
+
 
 ## Results
 
-### From-scratch models (32 input size)
+### From-scratch models (32x32x3 input size)
 | Network           | Trainable parameters | Non-Trainable parameters | Steps/ epoch | Validation Steps | Epochs | Memory   | Accuracy |
 |-------------------|----------------------|--------------------------|--------------|------------------|--------|----------|----------|
 | Simple CNN        | 128,420              | 0                        | 30           | 5                | 50     | 1.58 MB  | 0,56     |
@@ -57,7 +67,7 @@ We first examined the effect of the number of trainable layers regarding th accu
 | fourth_32         | 1,753,252            | 0                        | 40           | 10               | 70     | 21.1 MB  | 0,63     |
 | fourth_32_opt     | 1,753,252            | 0                        | 50           | 10               | 100    | 21.1 MB  | 0,63     |
 
-### From-scratch models (78 input size)
+### From-scratch models (78x78x3 input size)
 | Network           | Trainable parameters | Non-Trainable parameters | Steps/ epoch | Validation Steps | Epochs | Memory   | Accuracy |
 |-------------------|----------------------|--------------------------|--------------|------------------|--------|----------|----------|
 | first_78         | 902,628   | 0   | 40 | 10 | 100 | 10.89 MB | 0,57 |
