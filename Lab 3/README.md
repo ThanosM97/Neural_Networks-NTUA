@@ -29,12 +29,12 @@ Then we split the dataset into train/validation/test subsets and used the follow
 
 ## From Scratch
 
-On this part of the lab we tried to build some architectures from scratch . For this purpose we builded 2 models for image size 32x32 and 78x78  (First,Second) ,
-2 models only for image size 32x32(Third,Fourth) and other 2 models ony for image size 78x78 (Fifth,Sixth) .
+On this part of the lab we tried to build some architectures from scratch. For this purpose we built 2 models for image size 32x32 and 78x78  (First,Second),
+2 models only for image size 32x32(Third, Fourth) and other 2 models ony for image size 78x78 (Fifth, Sixth) .
 
-These models have 2 versions,the simple and the optimized . In optimized version we applied some extra techniques such as Data augmentation , Early Stopping . 
-The aim was to distinguish the two best models in our task. The best models tested with different batch size parameters (32,64,default=128) and then 
-the best one (second_32_b64) tested with different optimizers ( Adam, Nadam, RMSprop, SGD ) .
+These models have 2 versions,the simple and the optimized. In optimized version we applied some extra techniques such as Data augmentation, Early Stopping. 
+The aim was to distinguish the two best models in our task. The best models tested with different batch size parameters (32, 64, default=128) and then 
+the best one (second_32_b64) tested with different optimizers ( Adam, Nadam, RMSprop, SGD ).
 
 
 ## Transfer Learning
