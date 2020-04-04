@@ -27,16 +27,6 @@ Then we split the dataset into train/validation/test subsets and used the follow
 - Batch
 - Prefetch
 
-
-## Transfer Learning
-
-On this part of the lab we applied transfer learning on the pre-trained models of [Keras Applications](https://keras.io/applications/). In addition we used
-the state-of-the-art [EfficientNets](https://github.com/qubvel/efficientnet) implemented by [Pavel Yakubovskiy](https://github.com/qubvel).
-
-Original paper: [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/abs/1905.11946)
-
-We first examined the effect of the number of trainable layers regarding th accuracy of the model. Then we chose the model that performed best and examined its performance with the use of different optimizers and steps per training epoch. On the results below, we used early stopping with a maximum number of epochs of 200.
-
 ## From Scratch
 
 On this part of the lab we tried to build some architectures from scratch . For this purpose we builded 2 models for image size 32x32 and 78x78  (First,Second) ,
@@ -46,6 +36,15 @@ These models have 2 versions,the simple and the optimized . In optimized version
 The aim was to distinguish the two best models in our task. The best models tested with different batch size parameters (32,64,default=128) and then 
 the best one (second_32_b64) tested with different optimizers ( Adam, Nadam, RMSprop, SGD ) .
 
+
+## Transfer Learning
+
+On this part of the lab we applied transfer learning on the pre-trained models of [Keras Applications](https://keras.io/applications/). In addition we used
+the state-of-the-art [EfficientNets](https://github.com/qubvel/efficientnet) implemented by [Pavel Yakubovskiy](https://github.com/qubvel).
+
+Original paper: [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/abs/1905.11946)
+
+We first examined the effect of the number of trainable layers regarding th accuracy of the model. Then we chose the model that performed best and examined its performance with the use of different optimizers and steps per training epoch. On the results below, we used early stopping with a maximum number of epochs of 200.
 
 
 ## Results
